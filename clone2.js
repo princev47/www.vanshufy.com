@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds){
 }
 async function getSongs(folder){
     currFolder = folder;
-    let a=await fetch(`/${folder}`);
+    let a=await fetch(`/www.musified.com/${folder}`);
     // console.log(a.text())
     let response=await a.text();
     // console.log(response)
@@ -81,7 +81,7 @@ const playMusic=(track,pause=false)=>{
 
 async function displayAlbums() {
     console.log("displaying albums")
-    let a = await fetch(`/songsClone2/`)
+    let a = await fetch(`/www.musified.com/songsClone2/`)
     let response = await a.text();
     // console.log(response)
     let div = document.createElement("div")
