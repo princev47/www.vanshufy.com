@@ -17,7 +17,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder, albumSongs) {
     currFolder = folder;
-    songs = albumSongs.map(song => `${folder}/${song}`);
+    songs = albumSongs.map(song => song);
     
     console.log(songs);
 
