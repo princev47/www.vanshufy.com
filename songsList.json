@@ -1,0 +1,16 @@
+{
+    "songs": [
+      "song1.mp3",
+      "song2.mp3",
+      "song3.mp3"
+    ],
+    "albums": [
+      {
+        "folder": "ncs",
+        "cover": "cover.jpg",
+        "title": "Album Title",
+        "description": "Album Description"
+      }
+    ]
+  }
+  
