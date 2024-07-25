@@ -136,7 +136,7 @@ async function main() {
     next.addEventListener("click", () => {
         currentSong.pause();
         let index = songs.indexOf(currentSong.src.split("/").pop());
-        if ((index + 1) < songs.length - 1) {
+        if ((index + 1) < songs.length) {
             playMusic(songs[index + 1]);
         }
     });
