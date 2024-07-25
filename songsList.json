@@ -12,4 +12,18 @@
       }
     ]
   }
+{
+    "songs": [
+      "skyfall.mp3",
+      "skyfall2.mp3"
+    ],
+    "albums": [
+      {
+        "folder": "cs",
+        "cover": "cover.jpg",
+        "title": "Album Title",
+        "description": "Album Description"
+      }
+    ]
+  }
   
