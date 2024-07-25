@@ -1,14 +1,25 @@
 {
-    "songs": [
-      "believer.mp3",
-      "skyfall6.mp3"
-    ],
-    "albums": [
-      {
-        "folder": "ncs",
-        "cover": "cover.jpg",
-        "title": "Album Title",
-        "description": "Album Description"
-      }
-    ]
-  }
+  "albums": [
+    {
+      "folder": "ncs",
+      "title": "NCS Album",
+      "description": "This is the NCS album",
+      "cover": "cover.jpg",
+      "songs": [
+        "song1.mp3",
+        "song2.mp3",
+        "song3.mp3"
+      ]
+    },
+    {
+      "folder": "cs",
+      "title": "Another Album",
+      "description": "This is another album",
+      "cover": "cover.jpg",
+      "songs": [
+        "skyfall.mp3",
+        "skyfall2.mp3"
+      ]
+    }
+  ]
+}
