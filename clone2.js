@@ -1,6 +1,6 @@
 let currentSong = new Audio();
-let songs;
-let currFolder;
+let songs = [];
+let currFolder = '';
 
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
@@ -15,11 +15,9 @@ function secondsToMinutesSeconds(seconds) {
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-async function getSongs(folder) {
+async function getSongs(folder, albumSongs) {
     currFolder = folder;
-    let response = await fetch('songsList.json');
-    let data = await response.json();
-    songs = data.songs.map(song => `${folder}/${song}`);
+    songs = albumSongs.map(song => `${folder}/${song}`);
     
     console.log(songs);
 
@@ -28,10 +26,11 @@ async function getSongs(folder) {
     songsUL.innerHTML = "";
 
     for (const song of songs) {
+        let songName = song.split('/').pop();
         songsUL.innerHTML += `<li>
                                 <img class="invert" src="assetsClone2/music.svg" alt="">
                                 <div class="info">
-                                    <div>${song.replaceAll("%20", " ")}</div>
+                                    <div>${songName.replaceAll("%20", " ")}</div>
                                     <div>Harsh</div>
                                 </div>
                                 <div class="playnow">
@@ -51,7 +50,7 @@ async function getSongs(folder) {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = track;
+    currentSong.src = `${currFolder}/${track}`;
     if (!pause) {
         currentSong.play();
         play.src = "assetsClone2/pause.svg";
@@ -71,7 +70,7 @@ async function displayAlbums() {
     cardContainer.innerHTML = "";
     for (let album of albums) {
         let folder = album.folder;
-        cardContainer.innerHTML += `<div data-folder="${folder}" class="card">
+        cardContainer.innerHTML += `<div data-folder="${folder}" class="card" data-songs='${JSON.stringify(album.songs)}'>
             <div class="play">
                 <img src="assetsClone2/play.svg" alt="">
             </div>
@@ -85,17 +84,15 @@ async function displayAlbums() {
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         e.addEventListener("click", async item => {
             console.log("Fetching Songs");
-            songs = await getSongs(`songsClone2/${item.currentTarget.dataset.folder}`);
+            let folder = item.currentTarget.dataset.folder;
+            let albumSongs = JSON.parse(item.currentTarget.dataset.songs);
+            songs = await getSongs(`songsClone2/${folder}`, albumSongs);
             playMusic(songs[0]);
         });
     });
 }
 
 async function main() {
-    // Get the list of all the songs
-    await getSongs("songsClone2/ncs");
-    playMusic(songs[0], true);
-
     // Display all the albums on the page
     await displayAlbums();
 
@@ -130,7 +127,7 @@ async function main() {
 
     previous.addEventListener("click", () => {
         currentSong.pause();
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        let index = songs.indexOf(currentSong.src.split("/").pop());
         if ((index - 1) >= 0) {
             playMusic(songs[index - 1]);
         }
@@ -138,7 +135,7 @@ async function main() {
 
     next.addEventListener("click", () => {
         currentSong.pause();
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        let index = songs.indexOf(currentSong.src.split("/").pop());
         if ((index + 1) < songs.length - 1) {
             playMusic(songs[index + 1]);
         }
