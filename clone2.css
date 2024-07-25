@@ -12,6 +12,15 @@ body{
     color: white;
 }
 
+.home{
+    background-color: #2d003d;
+    /* background-color: rgb(26, 26, 26); */
+}
+
+.library{
+    background-color: #16001f;
+    /* background-color: rgb(26, 26, 26); */
+}
 
 .close{
     display: none;
@@ -79,17 +88,12 @@ body{
     color: grey;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    /* border-radius: 20px; */
-    background-color: #282828;
-}
 
 .header{
     display: flex;
     justify-content: space-between;
     background-color: rgb(34,34,34);
+    background-color: #300241;
 }
 
 
@@ -99,6 +103,7 @@ body{
 
 .spotifyPlaylists{
     padding: 16px;
+    background-color: #0f0015;
 }
 
 .spotifyPlaylists h1{
@@ -123,7 +128,8 @@ body{
     
     border-radius: 5px;
 
-    background-color: #252525;
+    /* background-color: #252525; */
+    background-color: #580853;
 }
 
 .card:hover{
@@ -217,7 +223,7 @@ body{
     /* display: flex; */
     position: fixed;
     bottom: 30px;
-    background-color: rgb(23, 129, 43);
+    background-color: rgb(35, 4, 47);
     width: 90%;
     width: 70vw;
     padding: 12px;
@@ -433,6 +439,18 @@ body{
     .timevol{
         display:block;
     }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav{
+        padding: 10px;
+        /* padding-left: 7px; */
+    }
+    .buttons{
+        padding: 0px;
+    }
 
 
 }
@@ -468,15 +486,27 @@ body{
         align-content: center;
 
     }
+    h1{
+        font-size: x-large;
+    }
     .card{
         /* width: 60vw; */
-        width: 80vw;
+        width: 33vw;
+        margin: 1vw;
+        /* gap: 1000vw; */
     }
+    .card>*{
+        /* padding: 1vw; */
+        padding-top: 8px;
+    }
+
     h2{
-        font-size: larger;
+        font-size: 5vw;
+
     }
     p{
-        font-size: small;
+        font-size: 3vw;
+
     }
     .songinfo{
         width: 80vw;
@@ -487,5 +517,3 @@ body{
 
     
 }
-
-  
