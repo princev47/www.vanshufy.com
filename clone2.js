@@ -71,9 +71,6 @@ async function displayAlbums() {
     for (let album of albums) {
         let folder = album.folder;
         cardContainer.innerHTML += `<div data-folder="${folder}" class="card" data-songs='${JSON.stringify(album.songs)}'>
-            <div class="play">
-                <img src="assetsClone2/play.svg" alt="">
-            </div>
             <img src="songsClone2/${folder}/${album.cover}" alt="cover">
             <h2>${album.title}</h2>
             <p>${album.description}</p>
