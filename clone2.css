@@ -1,10 +1,15 @@
 /*   import font style */
 
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+AR:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
     --a:0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 
 
 body{
@@ -12,6 +17,15 @@ body{
     color: white;
 }
 
+.home{
+    background-color: #2d003d;
+    /* background-color: rgb(26, 26, 26); */
+}
+
+.library{
+    background-color: #16001f;
+    /* background-color: rgb(26, 26, 26); */
+}
 
 .close{
     display: none;
@@ -76,20 +90,16 @@ body{
 
 }
 .footer a{
-    color: grey;
+    color: rgb(246, 244, 247);
+    text-decoration: none;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    /* border-radius: 20px; */
-    background-color: #282828;
-}
 
 .header{
     display: flex;
     justify-content: space-between;
     background-color: rgb(34,34,34);
+    background-color: #300241;
 }
 
 
@@ -99,6 +109,7 @@ body{
 
 .spotifyPlaylists{
     padding: 16px;
+    background-color: #0f0015;
 }
 
 .spotifyPlaylists h1{
@@ -123,7 +134,8 @@ body{
     
     border-radius: 5px;
 
-    background-color: #252525;
+    /* background-color: #252525; */
+    background-color: #580853;
 }
 
 .card:hover{
@@ -132,7 +144,7 @@ body{
     cursor: pointer;
     --a:1;
 }
-
+/* 
 .play{
     width: 28px;
     height: 28px;
@@ -144,15 +156,12 @@ body{
     top: 166px;
     right: 17px;
     opacity: var(--a);
-    /* bottom: 88px; */
     right: 17px;
     
-    /* fill: #000; */
-    /* border: 2px solid #000; */
     align-items: center;
     justify-content: center;
     transition: all 1s ease-out;
-}
+} */
 
 
 
@@ -171,14 +180,19 @@ body{
     margin: 0 12px;
 }
 
+
 .signupbtn{
     font-weight: bold;
     border: none;
     outline: none;
-    background-color: #282828;
-    color: rgb(95, 93, 93);
+    background-color:#300241;
+    color: rgb(22, 0, 30);
+    color: white;
+    text-shadow: 0px 0px 2px #16001f;
     cursor: pointer;
     font-size: 16px;
+    padding: 10px;
+    border-radius: 40px;
 }
 
 .signupbtn:hover{
@@ -217,7 +231,7 @@ body{
     /* display: flex; */
     position: fixed;
     bottom: 30px;
-    background-color: rgb(23, 129, 43);
+    background-color: rgb(35, 4, 47);
     width: 90%;
     width: 70vw;
     padding: 12px;
@@ -418,6 +432,7 @@ body{
         justify-content: center;
         align-items: center;
         gap: 14px;
+        width: 10vw;
     }
 
     .cardContainer{
@@ -433,6 +448,18 @@ body{
     .timevol{
         display:block;
     }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav{
+        padding: 10px;
+        /* padding-left: 7px; */
+    }
+    .buttons{
+        padding: 0 1vw;
+    }
 
 
 }
@@ -440,8 +467,38 @@ body{
 
 @media (max-width:898px){
     .card{
-        width: 40vw;
+        width: 25vw;
     }
+
+    /* .signupbtn{
+        font-weight: bold;
+        border: none;
+        outline: none;
+        background-color: #b94eda;
+        color: rgb(22, 0, 30);
+        color: white;
+        text-shadow: 0px 0px 2px #16001f;
+        cursor: pointer;
+        font-size: 3vw;
+        padding: 10px;
+        border-radius: 40px;
+        width: auto;
+    }
+
+    .loginbtn{
+        background-color: white;
+        border-radius: 21px;
+        color: rgb(45, 45, 45);
+        font-weight: bold;
+        padding: 3vw;
+        width: auto;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 3vw;
+    } */
+
+
 }
 /* 
 @media (max-width:898x){
@@ -450,10 +507,52 @@ body{
     }
 } */
 
+@media(max-width : 572px){
+    .card{
+        width: 35vw;
+        /* min-width: 20vw; */
+    }
+}
 @media (max-width : 471px){
     .card{
-        width: 80vw;
+        width: 35vw;
+        /* min-width: 20vw; */
     }
+
+    .signupbtn{
+        font-weight: bold;
+        border: none;
+        outline: none;
+        /* background-color: #b94eda; */
+        color: rgb(22, 0, 30);
+        color: white;
+        text-shadow: 0px 0px 2px #16001f;
+        cursor: pointer;
+        font-size: 3vw;
+        padding: 10px;
+        border-radius: 40px;
+        width: auto;
+    }
+
+    .loginbtn{
+        background-color: white;
+        border-radius: 21px;
+        color: rgb(45, 45, 45);
+        font-weight: bold;
+        padding: 2vw 3vw;
+        /* width: 10vw; */
+        width: auto;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 3vw;
+    }
+
+    .buttons>*{
+        margin: 0 1vw;
+    }
+
+
 }
 
 @media (max-width:400px) {
@@ -468,15 +567,27 @@ body{
         align-content: center;
 
     }
+    h1{
+        font-size: x-large;
+    }
     .card{
         /* width: 60vw; */
-        width: 80vw;
+        width: 33vw;
+        margin: 1vw;
+        /* gap: 1000vw; */
     }
+    .card>*{
+        /* padding: 1vw; */
+        padding-top: 8px;
+    }
+
     h2{
-        font-size: larger;
+        font-size: 5vw;
+
     }
     p{
-        font-size: small;
+        font-size: 3vw;
+
     }
     .songinfo{
         width: 80vw;
@@ -484,6 +595,46 @@ body{
         justify-content: center;
         align-items: center;
     }
-
     
+    .signupbtn{
+        font-weight: bold;
+        border: none;
+        outline: none;
+        background-color: #b94eda;
+        background-color: #300241;
+        color: rgb(22, 0, 30);
+        color: white;
+        text-shadow: 0px 0px 2px #16001f;
+        cursor: pointer;
+        font-size: 3vw;
+        padding: 10px;
+        border-radius: 40px;
+        width: auto;
+    }
+
+    .loginbtn{
+        background-color: white;
+        border-radius: 21px;
+        color: rgb(45, 45, 45);
+        font-weight: bold;
+        padding: 2vw 2.2vw;
+        /* width: 10vw; */
+        width: auto;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 3.5vw;
+    }
+
+    .buttons>*{
+        margin: 0 1vw;
+    }
+
+
 }
+
+@media (max-width:312px){
+    .card{
+        width: 32vw;
+    }
+} 
