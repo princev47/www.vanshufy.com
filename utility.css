@@ -44,24 +44,23 @@
     margin: 16px 0px;
 }
 
-
 /* For WebKit browsers */
 ::-webkit-scrollbar {
     width: 12px;               /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: #2c2c2c;       /* Background color of the scrollbar track */
+    background: #37003a;       /* Background color of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #555;    /* Color of the scrollbar thumb */
+    background-color: #610061; /* Color of the scrollbar thumb */
     border-radius: 6px;        /* Rounded corners of the scrollbar thumb */
-    border: 3px solid #2c2c2c; /* Padding around scrollbar thumb */
+    border: 3px solid #440437; /* Padding around scrollbar thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #888;    /* Color of the scrollbar thumb on hover */
+    background-color: #9932CC; /* Color of the scrollbar thumb on hover */
 }
 /* 
 /* For Firefox */
