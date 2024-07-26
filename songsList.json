@@ -1,6 +1,13 @@
 {
     "albums": [
         {
+            "folder": "1_Dark_(mood)",
+            "title": "Dark Horse",
+            "description": "Dark songs for you",
+            "cover": "cover.jpg",
+            "songs": ["believer3.mp3", "believer4.mp3"]
+        },
+        {
             "folder": "cs",
             "title": "Chill Songs",
             "description": "Relaxing tunes",
