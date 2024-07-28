@@ -1,11 +1,11 @@
 {
     "albums": [
         {
-            "folder": "cs",
-            "title": "Chill Songs",
-            "description": "Relaxing tunes",
+            "folder": "Bright_(mood)",
+            "title": "Bright Songs",
+            "description": "Feel Good Songs",
             "cover": "cover.jpg",
-            "songs": ["skyfall.mp3", "skyfall2.mp3"]
+            "songs": ["Counting stars.mp3", "Immortals.mp3","Believer"]
         },
         {
             "folder": "1_Dark_(mood)",
@@ -21,6 +21,21 @@
             "cover": "cover.jpg",
             "songs": ["skyfall.mp3", "skyfall2.mp3"]
         },
+        {
+            "folder": "Funky_(mood)",
+            "title": "Funky Mood",
+            "description": "Crazy songs",
+            "cover": "cover.jpg",
+            "songs": ["Gangnam Style.mp3", "The real slim shady.mp3"]
+        },
+        
+        {
+            "folder": "Love_(mood)",
+            "title": "Love Mood",
+            "description": "Fall in love",
+            "cover": "cover.jpg",
+            "songs": ["Shape of You.mp3", "Night Changes.mp3"]
+        }
         {
             "folder": "ncs",
             "title": "Non-Stop",
