@@ -35,7 +35,7 @@
             "description": "Fall in love",
             "cover": "cover.jpg",
             "songs": ["Shape of You.mp3", "Night Changes.mp3"]
-        }
+        },
         {
             "folder": "ncs",
             "title": "Non-Stop",
