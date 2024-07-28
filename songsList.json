@@ -8,18 +8,18 @@
             "songs": ["Counting stars.mp3", "Immortals.mp3","Believer"]
         },
         {
-            "folder": "1_Dark_(mood)",
-            "title": "Dark Horse",
-            "description": "Dark songs for you",
-            "cover": "cover.jpg",
-            "songs": ["believer3.mp3", "believer4.mp3"]
-        },
-        {
             "folder": "cs",
             "title": "Chill Songs",
             "description": "Relaxing tunes",
             "cover": "cover.jpg",
             "songs": ["skyfall.mp3", "skyfall2.mp3"]
+        },
+        {
+            "folder": "1_Dark_(mood)",
+            "title": "Dark Horse",
+            "description": "Dark songs for you",
+            "cover": "cover.jpg",
+            "songs": ["believer3.mp3", "believer4.mp3"]
         },
         {
             "folder": "Funky_(mood)",
@@ -50,7 +50,7 @@
             "description": "Relaxing tunes",
             "cover": "cover.jpg",
             "songs": ["skyfall.mp3", "skyfall2.mp3"]
-        },
+        }
     ]
 }
 
