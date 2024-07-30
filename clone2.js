@@ -31,7 +31,7 @@ async function getSongs(folder, albumSongs) {
                                 <img class="invert" src="assetsClone2/music.svg" alt="">
                                 <div class="info">
                                     <div>${songName.replaceAll("%20", " ")}</div>
-                                    <div>Durga</div>
+                                    <div>Harsh</div>
                                 </div>
                                 <div class="playnow">
                                     <span>Play Now</span>
