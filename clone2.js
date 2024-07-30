@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(seconds) {
 async function getSongs(folder, albumSongs) {
     currFolder = folder;
     songs = albumSongs.map(song => song);
-    
+
     console.log(songs);
 
     // Show all the songs in the playlist
@@ -31,7 +31,7 @@ async function getSongs(folder, albumSongs) {
                                 <img class="invert" src="assetsClone2/music.svg" alt="">
                                 <div class="info">
                                     <div>${songName.replaceAll("%20", " ")}</div>
-                                    <div>Harsh</div>
+                                    <div>Durga</div>
                                 </div>
                                 <div class="playnow">
                                     <span>Play Now</span>
@@ -124,17 +124,23 @@ async function main() {
 
     previous.addEventListener("click", () => {
         currentSong.pause();
-        let index = songs.indexOf(currentSong.src.split("/").pop());
+        let currentTrack = currentSong.src.split("/").pop();
+        let index = songs.indexOf(decodeURI(currentTrack));
         if ((index - 1) >= 0) {
-            playMusic(songs[index - 1]);
+            setTimeout(() => playMusic(songs[index - 1]), 200);
+        } else {
+            setTimeout(() => playMusic(songs[songs.length - 1]), 200);
         }
     });
 
     next.addEventListener("click", () => {
         currentSong.pause();
-        let index = songs.indexOf(currentSong.src.split("/").pop());
+        let currentTrack = currentSong.src.split("/").pop();
+        let index = songs.indexOf(decodeURI(currentTrack));
         if ((index + 1) < songs.length) {
-            playMusic(songs[index + 1]);
+            setTimeout(() => playMusic(songs[index + 1]), 200);
+        } else {
+            setTimeout(() => playMusic(songs[0]), 200);
         }
     });
 
