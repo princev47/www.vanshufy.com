@@ -85,6 +85,7 @@ async function displayAlbums() {
             let albumSongs = JSON.parse(item.currentTarget.dataset.songs);
             songs = await getSongs(`songsClone2/${folder}`, albumSongs);
             playMusic(songs[0]);
+              document.querySelector(".left").style.left =0; 
         });
     });
 }
